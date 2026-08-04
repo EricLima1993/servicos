@@ -6,6 +6,10 @@ create table produtos (
     valor_unitario decimal(16,2) not null
 );
 
+alter table produtos add column ativo boolean;
+
+update produtos set ativo = true;
+
 create database icomprasclientes;
 
 create table clientes (
@@ -18,6 +22,10 @@ create table clientes (
     email varchar(150),
     telefone varchar(20)
 );
+
+alter table clientes add column ativo boolean;
+
+update clientes set ativo = true;
 
 create database icompraspedidos;
 
